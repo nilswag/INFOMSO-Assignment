@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vaaYYNDNV9w=",
+  "success": true,
+  "projectFilePath": "/home/nils/Documents/repos/INFOMSO-Assignment-2/App/App.csproj",
+  "expectedPackageFiles": [
+    "/home/nils/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.12/microsoft.aspnetcore.app.ref.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
