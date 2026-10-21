@@ -13,7 +13,7 @@ public abstract class CommandBody : Command
         {
             Console.Error.WriteLine("Nested commands that have bodies are only allowed in expert programs.");
             return;
-        } // potentially throw exception
+        } // perhaps throw exception
         
         _body.AddLast(cmd);
     }
