@@ -10,20 +10,20 @@ public abstract class Program
 
     public abstract void Run();
 
-    public void AddCommand(Command cmd)
+    public void AddCommand(Command command)
     {
-        if (!AvailableCommands.Contains(cmd.GetType()))
+        if (!AvailableCommands.Contains(command.GetType()))
         {
-            Console.Error.WriteLine("Program does not support: " + cmd.GetType());
+            Console.Error.WriteLine("Program does not support: " + command.GetType());
             return;
         } // perhaps throw exception
         
-        Commands.AddLast(cmd);
+        Commands.AddLast(command);
     }
 
-    public void ImportCommands(LinkedList<Command> cmds)
+    public void ImportCommands(LinkedList<Command> command)
     {
-        Commands = cmds;
+        Commands = command;
     }
 
     public ProgramMetrics GetMetrics()
