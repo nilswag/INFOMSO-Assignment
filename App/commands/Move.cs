@@ -9,6 +9,11 @@ public class Move : Command
         Steps = steps;
     }
     
+    public override string ToString()
+    {
+        return $"Move {Steps}";
+    }
+
     public override void Execute(Player player, Type programType)
     {
         player.Move(Steps);

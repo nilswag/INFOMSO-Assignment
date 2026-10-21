@@ -9,6 +9,11 @@ public class Repeat : CommandBody
         NrRepeats = nrRepeats;
     }
     
+    public override string ToString()
+    {
+        return $"Repeat {NrRepeats} times";
+    }
+
     public override void Execute(Player player, Type programType)
     {
         for (var i = 0; i < NrRepeats; i++)

@@ -9,6 +9,11 @@ public class Turn : Command
         Direction = direction;
     }
     
+    public override string ToString()
+    {
+        return $"Turn {Direction.ToString().ToLower()}";
+    }
+
     public override void Execute(Player player, Type programType)
     {
         var arr = Enum.GetValues<Facing>();

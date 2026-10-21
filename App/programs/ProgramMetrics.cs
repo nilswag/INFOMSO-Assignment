@@ -10,9 +10,24 @@ public class ProgramMetrics
 
     public ProgramMetrics(IEnumerable<Command> commands)
     {
-        NrCommands = commands.Count();
+        NrCommands = CalculateCommands(commands);
         MaxNesting = CalculateNesting(commands);
         NrRepeats = CalculateRepeats(commands);
+    }
+
+    private static int CalculateCommands(IEnumerable<Command> commands)
+    {
+        var count = 0;
+
+        foreach (var command in commands)
+        {
+            count++;
+
+            if (command is CommandBody body)
+                count += CalculateCommands(body.Body);
+        }
+
+        return count;
     }
 
     private static int CalculateNesting(IEnumerable<Command> commands)
