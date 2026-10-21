@@ -2,6 +2,6 @@ namespace App;
 
 public enum Direction
 {
-    Left,
-    Right
+    Left = -1,
+    Right = 1
 }
