@@ -11,6 +11,6 @@ public class Move : Command
     
     public override void Execute(Player player, Type programType)
     {
-        
+        player.Move(Steps);
     }
 }

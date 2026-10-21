@@ -11,6 +11,13 @@ public class Turn : Command
     
     public override void Execute(Player player, Type programType)
     {
-        throw new NotImplementedException();
+        var arr = Enum.GetValues<Facing>();
+        
+        var index = (int)player.Facing + (int)Direction;
+        index %= 4;
+        if (index < 0)
+            index = 3;
+
+        player.Facing = arr[index];
     }
 }
