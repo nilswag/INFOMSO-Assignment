@@ -5,6 +5,7 @@ namespace App.commands;
 public abstract class CommandBody : Command
 {
     private readonly LinkedList<Command> _body = new();
+    public IEnumerable<Command> Body { get => _body; }
 
     public void AddChild(Command cmd, Type programType)
     {
