@@ -6,7 +6,7 @@ namespace Tests;
 
 public class TurnTests
 {
-    // all 8 cases, also north -> west and west -> north where it wraps around
+    //all 8 cases
     [Theory]
     [InlineData(Facing.North, Direction.Right, Facing.East)]
     [InlineData(Facing.East, Direction.Right, Facing.South)]
